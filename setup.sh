@@ -154,7 +154,7 @@ steps:
     #!/bin/bash
     set -e
 
-    readonly GIT_REPO="https://github.com/stashbunny/mig-blue-green.git"
+    readonly GIT_REPO="https://github.com/wevertoonsilva/mig-blue-green.git"
 
     echo "Cloning demo source repo"
     mkdir /workspace/from/
