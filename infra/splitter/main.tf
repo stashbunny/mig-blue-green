@@ -173,7 +173,7 @@ resource "google_compute_address" "active" {
   name         = "${var.ns}address-name"
   address_type = "EXTERNAL"
   network_tier = "STANDARD"
-  region       = "us-central1"
+  region       = "us-west1"
 }
 
 output "google_compute_network" {

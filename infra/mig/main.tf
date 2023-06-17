@@ -62,7 +62,7 @@ resource "google_compute_instance_template" "default" {
     boot         = true
     device_name  = "persistent-disk-0"
     mode         = "READ_WRITE"
-    source_image = "projects/debian-cloud/global/images/family/debian-10"
+    source_image = "debian-cloud/debian-11"
     type         = "PERSISTENT"
   }
   labels = {
@@ -121,6 +121,14 @@ resource "google_compute_instance_group_manager" "default" {
   }
   base_instance_name = local.base_instance_name
   target_size        = 1
+
+  update_policy {
+    type                  = "PROACTIVE"
+    minimal_action        = "REPLACE"
+    max_surge_fixed       = 2
+    max_unavailable_fixed = 0
+    min_ready_sec         = 50
+  }
 
   # NOTE: the name of this resource must be unique for every update;
   #       this is wy we have a app_version in the name; this way
