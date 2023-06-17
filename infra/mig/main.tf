@@ -127,7 +127,6 @@ resource "google_compute_instance_group_manager" "default" {
     minimal_action        = "REPLACE"
     max_surge_fixed       = 2
     max_unavailable_fixed = 0
-    min_ready_sec         = 50
   }
 
   # NOTE: the name of this resource must be unique for every update;
