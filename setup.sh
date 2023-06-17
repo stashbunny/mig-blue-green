@@ -154,7 +154,7 @@ steps:
     #!/bin/bash
     set -e
 
-    readonly GIT_REPO="https://github.com/GoogleCloudPlatform/cloud-build-samples.git"
+    readonly GIT_REPO="https://github.com/stashbunny/mig-blue-green.git"
 
     echo "Cloning demo source repo"
     mkdir /workspace/from/
@@ -170,7 +170,7 @@ steps:
     cd ./copy-of-mig-blue-green
 
     echo "Making a copy"
-    cp -r /workspace/from/original/mig-blue-green/* ./
+    cp -r /workspace/from/original/* ./
 
     echo "Setting git identity"
     git config user.email \
