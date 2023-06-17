@@ -29,10 +29,10 @@ function tf_install_in_cloud_build_step {
         -y
 
     echo "Manually installing Terraform"
-    wget https://releases.hashicorp.com/terraform/1.3.4/terraform_1.3.4_linux_386.zip
-    unzip -q terraform_1.3.4_linux_386.zip
+    wget https://releases.hashicorp.com/terraform/1.5.0/terraform_1.5.0_linux_386.zip
+    unzip -q terraform_1.5.0_linux_386.zip
     mv ./terraform /usr/bin/
-    rm -rf terraform_1.3.4_linux_386.zip
+    rm -rf terraform_1.5.0_linux_386.zip
 
     echo "Verifying installation"
     terraform -v
